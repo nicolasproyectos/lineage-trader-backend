@@ -12,7 +12,7 @@ const getWeapons = async(req,res = response)=>{
     });
 }
 
-const getArmor = async(req,res = response)=>{
+const getArmors = async(req,res = response)=>{
     const respuesta = await Armor.find().sort('-rango nombre');
     res.json({
         ok: true,
@@ -30,6 +30,6 @@ const getSets = async(req,res = response)=>{
 
 module.exports = {
     getWeapons,
-    getArmor,
+    getArmors,
     getSets
 }

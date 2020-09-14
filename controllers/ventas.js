@@ -1,10 +1,9 @@
 const {response} = require('express');
 const Venta = require('../models/Venta');
 
-
-const altaVenta = async(req,res = response)=>{
+const nuevaVenta = async(req,res = response)=>{
     const nuevaVenta = new Venta(req.body);
-    const ventaOk = await nuevaVenta.save()
+    const ventaOk = await nuevaVenta.save();
     res.json({
         ok: true,
         item: ventaOk
@@ -12,5 +11,5 @@ const altaVenta = async(req,res = response)=>{
 }
 
 module.exports = {
-    altaVenta
+    nuevaVenta
 }
